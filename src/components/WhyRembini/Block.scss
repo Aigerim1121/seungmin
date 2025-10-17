@@ -1,0 +1,70 @@
+.whyrembini {
+  width: 1300px;
+  height: 777px;
+  margin: 0 auto;
+  padding: 20px;
+
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+  }
+
+  .card {
+    background: #faf7f3;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .icon {
+      font-size: 36px;
+      margin-bottom: 15px;
+      color: #8c5c3b;
+    }
+
+    h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 14px;
+      color: #555;
+    }
+  }
+
+  .discount {
+    background: #3a2f2f;
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+    border-radius: 8px;
+
+    p {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    span {
+      display: block;
+      font-size: 22px;
+      font-weight: 700;
+      margin-top: 10px;
+      color: #f3c23c;
+    }
+  }
+}

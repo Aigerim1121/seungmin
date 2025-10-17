@@ -1,0 +1,98 @@
+.bg {
+    width: 1450px;
+    height: 318px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    margin-top: 38px;
+    background: rgba(237, 237, 237, 1);
+
+    .magazin {
+        width: 414px;
+        height: 260px;
+        margin: 0 auto;
+        background-image: url("svg/divan.svg");
+
+        h1 {
+            width: 243px;
+            height: 80px;
+            color: rgba(240, 239, 237, 1);
+            font-size: 34px;
+            font-weight: 400;
+            line-height: 43px;
+            letter-spacing: 0%;
+            text-align: center;
+            margin: auto;
+            margin-top: 48px;
+            color: white;
+        }
+    }
+
+    .magazin2 {
+        width: 414px;
+        height: 260px;
+        margin: 0 auto;
+        
+        background-image: url("svg/ruka.svg");
+
+        h1 {
+            width: 257px;
+            height: 80px;
+            color: rgba(240, 239, 237, 1);
+            font-size: 34px;
+            font-weight: 400;
+            line-height: 43px;
+            letter-spacing: 0%;
+            text-align: center;
+            margin: auto;
+            margin-top: 48px;
+            color: white;
+            
+
+        }
+    }
+
+    .magazin3 {
+        width: 200px;
+        height: 80px;
+        width: 414px;
+        height: 260px;
+        margin: 0 auto;
+        background-image: url("svg/walllet.svg");
+
+        h1 {
+            color: rgba(240, 239, 237, 1);
+            font-size: 34px;
+            font-weight: 400;
+            line-height: 43px;
+            letter-spacing: 0%;
+            text-align: center;
+            margin-top: 48px;
+            color: white;
+
+
+        }
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    button {
+        width: 192px;
+        height: 50px;
+        border: 1px solid rgba(238, 178, 86, 1);
+        border-radius: 3px;
+        display: flex;
+        margin-top: 28px;
+        margin-left: 111px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        color: rgba(238, 178, 86, 1);
+        cursor: pointer;
+        text-decoration: none;
+    }
+}
+

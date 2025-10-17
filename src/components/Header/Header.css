@@ -1,0 +1,483 @@
+.header {
+    width: 1300px;
+    height: 110px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header img {
+    width: 224px;
+    height: 63px;
+}
+
+.input {
+    display: flex;
+}
+
+.input input {
+    width: 256px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14.5px 23px 14.5px 23px;
+    border-radius: 3px;
+    background: rgba(240, 239, 237, 1);
+    border: none;
+}
+
+.input button {
+    width: 72px;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10;
+    padding: 14px 26px 14px 26px;
+    border-radius: 3px;
+    background: rgba(238, 178, 86, 1);
+    border: none;
+}
+
+.input button img {
+    width: 20px;
+    height: 20px;
+}
+
+.truck {
+    width: 215px;
+    height: 51px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 9px;
+}
+
+.gruzovik{
+    margin-left: 20px;
+}
+
+.truck p {
+    margin-top: 15px;
+    font-family: Proxima Nova;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: left;
+    color: rgba(49, 30, 25, 0.5);
+}
+
+.truck p strong {
+    font-family: Proxima Nova;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: left;
+    color: rgba(49, 30, 25, 1);
+}
+
+.adres {
+    width: 235px;
+    height: 51px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 9px;
+}
+
+.adres p {
+    margin-top: 15px;
+    font-family: Proxima Nova;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: left;
+    color: rgba(49, 30, 25, 0.5);
+}
+
+.adres p strong {
+    font-family: Proxima Nova;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: left;
+    color: rgba(49, 30, 25, 1);
+}
+
+.korzina {
+    width: 184px;
+    height: 48px;
+    border-radius: 3px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #90604C;
+    position: relative;
+    text-decoration: nonex;
+}
+
+.korzina button {
+    width: 56px;
+    height: 48px;
+    border-radius: 3px;
+    background-color: #88543E;
+    color: white;
+    border: none;
+}
+
+.cart {
+    width: 20px;
+    height: 20px;
+    color: Brown;
+}
+
+.korzina p strong {
+    color: white;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.korzina p {
+    color: rgb(217, 214, 214);
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+.header3 {
+    width: 1300px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: -10px;
+   
+}
+
+.header3 a{
+    text-decoration: none;
+    color:  rgba(49, 30, 25, 1);
+}
+
+.remen {
+    width: 68px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2px;
+    padding: 13px 0px 13px 0px;
+}
+
+.sumki {
+    width: 68px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2px;
+    padding: 13px 0px 13px 0px;
+}
+
+.wallet {
+    width: 93px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2px;
+    padding: 13px 0px 13px 0px;
+}
+
+.zontik {
+    width: 67px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2px;
+    padding: 13px 0px 13px 0px;
+}
+
+.podtyaj {
+    width: 92px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2px;
+    padding: 13px 0px 13px 0px;
+}
+
+.backpack {
+    width: 84px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2px;
+    padding: 13px 0px 13px 0px;
+}
+
+.aksessuars {
+    width: 105px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2px;
+    padding: 13px 0px 13px 0px;
+}
+
+.perchatki {
+    width: 89px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2px;
+    padding: 13px 0px 13px 0px;
+}
+
+.galstuki {
+    width: 84px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2px;
+    padding: 13px 0px 13px 0px;
+}
+
+.braslety {
+    width: 104px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2px;
+    padding: 13px 0px 13px 0px;
+}
+
+.g-belt {
+    width: 104px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2px;
+    padding: 13px 0px 13px 0px;
+}
+
+.g-wallet {
+    width: 127px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
+    padding: 13px 0px 13px 0px;
+}
+
+.line {
+    width: 100%;
+    height: 0;
+    transform: rotate(90.00deg);
+    border: 1px solid rgba(49, 30, 25, 0.1);
+}
+
+.huinya{
+    width: 1300px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    gap: 20px;
+    background: rgba(240, 239, 237, 1);
+    justify-content: space-between;
+}
+
+.header1 {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    gap: 20px;
+    background: rgba(240, 239, 237, 1);
+    justify-content: space-between;
+}
+
+.pickmi {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.texty {
+    display: flex;
+    gap: 16px;
+}
+
+.texty h5 {
+    opacity: 0.5;
+    color: rgba(49, 30, 25, 1);
+    font-family: Proxima Nova;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.texty a {
+    text-decoration: none;
+}
+
+.nomer {
+    width: 196px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 22px;
+    padding: 3px 14px 3px 14px;
+    border-radius: 3px;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 1);
+}
+
+.nomer h3 {
+    width: 136px;
+    height: 19px;
+    color: rgba(49, 30, 25, 1);
+    font-family: Proxima Nova;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-top: -1px;
+}
+
+.nomer p {
+    width: 135px;
+    height: 17px;
+    opacity: 0.5;
+    color: rgba(49, 30, 25, 1);
+    font-family: Proxima Nova;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -0.7%;
+    text-align: left;
+    margin-top: 1px;
+}
+
+.voiti {
+    width: 94px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 14px 10px 14px;
+    border-radius: 3px;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 1);
+}
+
+.voiti a {
+    text-decoration: none;
+
+}
+
+.voiti a h5 {
+    color: rgba(49, 30, 25, 1);
+    font-family: Proxima Nova;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    margin-top: 9px;
+}
+
+.insta {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6;
+    padding: 8px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 1);
+}
+
+.insta img {
+    width: 24px;
+    height: 24px;
+}
+.icons{
+    position: relative;
+    z-index: 999;
+}
+
+.icons a{   
+     text-decoration: none;
+    }
+
+.icons a span{
+    justify-content: center;
+    align-items: center;
+    border-radius: 360px;
+    display: flex;
+    background-color: rgba(238, 178, 86, 1);
+    width: 20px;
+    height: 20px;
+    color: white;
+    font-size: 10px;
+    margin-top: -22px;
+    margin-left: 15px;
+    /* z-index: 999; */
+    position: absolute;
+    left: -225px;
+    top: -5px;
+}
+
+.header3{
+    text-decoration: none;
+}
+
+.header a{
+    text-decoration: none;
+}
+

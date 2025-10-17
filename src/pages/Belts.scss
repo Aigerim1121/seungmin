@@ -1,0 +1,142 @@
+.product {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 карточки в ряд */
+  gap: 30px;
+  background: #6b3a28; /* коричневый фон */
+  background-image: url("svg/brown-fon.svg");
+  background-size: cover;
+  padding: 50px 40px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.poduct {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 320px;
+  min-height: 480px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.cardik img {
+  width: 100%;
+  height: 230px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.cardik h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #4b2c1d;
+  margin: 10px 0;
+}
+
+.cardik p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.cardik > p:first-of-type {
+  color: #555;
+  font-weight: 500;
+  font-size: 13px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.price-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.price-btn h3 {
+  color: #b02000;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.price-btn button {
+  background: #fbb03b;
+  color: #4b2c1d;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s;
+
+  svg {
+    font-size: 18px;
+  }
+
+  &:hover {
+    background: #e69a2e;
+  }
+}
+
+.two-btn {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.novinka,
+.hit {
+  border: none;
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.novinka {
+  background: #007bff;
+}
+
+.hit {
+  background: #22c55e;
+}
+
+/* 🔸 Адаптация под мобильные */
+@media (max-width: 1200px) {
+  .product {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .product {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .product {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .poduct {
+    width: 100%;
+  }
+}

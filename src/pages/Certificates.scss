@@ -1,0 +1,262 @@
+.hz-icons {
+
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 1);
+
+    margin-top: 31px;
+
+    .takimichi {
+        width: 183px;
+        height: 124px;
+    }
+
+    .mikey {
+        width: 146px;
+        height: 124px;
+        margin-top: -4px;
+    }
+
+    .draken {
+        width: 211px;
+        height: 144px;
+        margin-top: 11px;
+    }
+
+    .mitsuya {
+        width: 91px;
+        height: 124px;
+        margin-top: -10px;
+    }
+
+    .badji {
+        width: 219px;
+        height: 164px;
+        margin-top: 27px;
+    }
+
+    .kazutora {
+        width: 165px;
+        height: 144px;
+    }
+}
+
+.pod-certif {
+    margin-left: 100px;
+
+    h1 {
+        width: 484px;
+        height: 43px;
+        color: rgba(49, 30, 25, 1);
+        font-family: Merriweather;
+        font-size: 34px;
+        font-weight: 400;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: left;
+        margin-top: 85px;
+    }
+}
+
+.sert-siniy {
+    width: 1459px;
+    height: 468px;
+    background: rgba(59, 67, 85, 1);
+    margin-top: 60px;
+    margin: auto;
+}
+
+.five-sert {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+
+}
+
+
+.sert1 {
+    width: 241px;
+    height: 348px;
+    border-radius: 3px;
+    box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 1);
+    margin-top: 60px;
+
+    img {
+        width: 189px;
+        height: 119px;
+        border-radius: 4px;
+        margin-left: 26px;
+        margin-top: 21px;
+    }
+
+    h2 {
+        width: 187px;
+        height: 50px;
+        color: rgba(49, 30, 25, 1);
+        font-family: Merriweather;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;
+        margin-top: 16px;
+        margin-left: 25px;
+    }
+
+    p {
+        width: 84px;
+        height: 29px;
+        opacity: 0.5;
+        color: rgba(49, 30, 25, 1);
+        font-family: Proxima Nova;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: left;
+        margin-left: 79px;
+        margin-top: 22px;
+    }
+
+    button {
+        width: 189px;
+        height: 44px;
+        background-color: rgba(238, 178, 86, 1);
+        border: none;
+        color: white;
+        margin-top: 10px;
+        margin-left: 26px;
+    }
+}
+
+.revengers {
+    display: flex;
+    gap: 90px;
+
+    .mayby {
+
+        h2 {
+            color: rgba(49, 30, 25, 1);
+            font-family: Merriweather;
+            font-size: 34px;
+            font-weight: 400;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: left;
+            margin-top: 60px;
+        }
+
+        .tokito {
+            width: 635px;
+            height: 57px;
+            border-radius: 3px;
+            background: rgba(255, 255, 255, 1);
+            display: flex;
+            align-items: center;
+            gap: 33px;
+            box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.05);
+            margin-top: 15px;
+
+            h3 {
+                color: rgba(0, 0, 0, 1);
+                font-family: Proxima Nova;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 19px;
+                letter-spacing: 0%;
+                text-align: left;
+            }
+
+            .nezuko {
+                width: 3px;
+                height: 65px;
+                border-radius: 3px;
+                background: rgba(144, 96, 76, 1);
+            }
+        }
+    }
+
+    .mudzan {
+        width: 550px;
+        height: 250px;
+        margin-top: 60px;
+    }
+}
+
+.wayyy {
+    margin-top: 100px;
+
+    h2 {
+        color: rgba(49, 30, 25, 1);
+        font-family: Merriweather;
+        font-size: 34px;
+        font-weight: 400;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: left;
+    }
+
+    .ways {
+        display: flex;
+        gap: 32px;
+        margin-top: 31px;
+
+        .way {
+            width: 413px;
+            height: 184px;
+            border-radius: 3px;
+            box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 1);
+
+            .bay {
+                width: 387px;
+                height: 158px;
+                box-sizing: border-box;
+                border: 1px solid rgba(0, 0, 0, 0.12);
+                border-radius: 3px;
+                box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.1);
+                margin: 0 auto;
+                margin-top: 13px;
+
+                .wall {
+                    width: 55px;
+                    height: 54.11px;
+                    color: rgba(144, 96, 76, 1);
+                    margin-left: 165px;
+                    margin-top: 41px;
+                }
+
+                .cardoo {
+                    width: 60.5px;
+                    height: 49.5px;
+                    color: rgba(144, 96, 76, 1);
+                    margin-left: 160px;
+                    margin-top: 41px;
+                }
+
+                .hz-zvuk {
+                    width: 41.25px;
+                    height: 51.48px;
+                    color: rgba(144, 96, 76, 1);
+                    margin-left: 165px;
+                    margin-top: 41px;
+                }
+
+                h4 {
+                    color: rgba(49, 30, 25, 1);
+                    font-family: Merriweather;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 100%;
+                    letter-spacing: 0%;
+                    text-align: center;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}
