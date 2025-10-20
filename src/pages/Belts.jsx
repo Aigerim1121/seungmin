@@ -5,10 +5,13 @@ import { addCart } from "../redux/cart/cartSlice";
 import "./Bags.scss";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FaRegCircleCheck } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 
 function Bags() {
   const dispatch = useDispatch();
-  const { list, loading, error } = useSelector((state) => state.bags);
+  const navigate = useNavigate(); 
+
+  const { list, loading, error } = useSelector((state) => state.belts);
 
   const [filterType, setFilterType] = useState(""); 
 
@@ -60,7 +63,7 @@ function Bags() {
                   <button className="hit">ХИТ!</button>
                 </div>
 
-                <img src={item.image} alt={item.title} />
+                <img src={item.image} alt={item.title}  onClick={() => navigate(`/product/${item.id}`)}/>
                 <p>
                   Код: {item.id} <FaRegCircleCheck /> В наличии
                 </p>

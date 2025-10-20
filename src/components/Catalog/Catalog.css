@@ -5,6 +5,11 @@
     margin: auto;
 }
 
+.catalog a{
+    text-decoration: none;
+    color: #311E19;
+}
+
 .catalog img {
     width: 45px;
     height: 45px;
@@ -321,4 +326,6 @@
 .nnn {
     margin-left: 129px;
 }
+
+
 

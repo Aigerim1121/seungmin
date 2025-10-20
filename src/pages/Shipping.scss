@@ -323,3 +323,157 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+
+  .shipping {
+    padding: 0 10px;
+  }
+
+  .dostavka h1 {
+    font-size: 26px;
+    text-align: center;
+    margin: 20px auto;
+  }
+
+  .dostavka-photos {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    .dostavshik {
+      width: 100%;
+      max-width: 340px;
+      height: auto;
+    }
+
+    h2 {
+      font-size: 18px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 14px;
+      text-align: center;
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .black-orange {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      text-align: center;
+
+      h4, h5 {
+        font-size: 13px;
+      }
+    }
+
+    .photo3 h4 {
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
+
+  .payment {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+
+    h2 {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    &__blocks {
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    &__card {
+      width: 100%;
+      height: auto;
+      padding: 20px;
+
+      h3 {
+        font-size: 15px;
+        text-align: center;
+      }
+
+      p {
+        font-size: 13px;
+        text-align: center;
+      }
+
+      .payment__logos {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+
+        img {
+          width: 70px;
+          height: 35px;
+        }
+      }
+    }
+  }
+
+  .payment-page {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+
+    .payment-form {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+
+      .payment-text {
+        font-size: 16px;
+        max-width: 100%;
+      }
+
+      .form-box {
+        width: 100%;
+        padding: 20px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+
+        .inputs {
+          flex-direction: column;
+        }
+
+        input {
+          font-size: 14px;
+        }
+
+        button {
+          font-size: 14px;
+          padding: 8px;
+        }
+      }
+    }
+
+    .payment-status {
+      padding: 20px;
+
+      .icon {
+        font-size: 50px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 13px;
+      }
+
+      button {
+        font-size: 14px;
+        padding: 8px 20px;
+      }
+    }
+  }
+}

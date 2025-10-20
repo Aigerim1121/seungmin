@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import "./Header.css"
 import { FaTruck } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
@@ -13,7 +13,7 @@ import { useNavigate } from 'react-router-dom'
 function Header() {
   const { list: cartlist } = useSelector((state) => state.cart)
 
-    const [text, setText] = useState("")
+  const [text, setText] = useState("")
 
   const navigate = useNavigate()
 
@@ -31,12 +31,12 @@ function Header() {
             <Link to="shipping/"><h5>Оплата и доставка</h5></Link>
             <Link to="aboutstore/"><h5>О магазине</h5></Link>
             <Link to="contact/"><h5>Контакты</h5></Link>
-             <Link to="brends/"><h5>Бренды</h5></Link>
+            <Link to="brends/"><h5>Бренды</h5></Link>
             <Link to="certificates/"><h5>Сертификаты</h5></Link>
-             <Link to="articles/"><h5>Статьи</h5></Link>
+            <Link to="articles/"><h5>Статьи</h5></Link>
             <Link to="reviews/"><h5>Отзывы</h5></Link>
             <Link to="loyaltycard/"><h5>Карта лояльности</h5></Link>
-            <Link to="guarantee/"><h5>Гарантии</h5></Link> 
+            <Link to="guarantee/"><h5>Гарантии</h5></Link>
           </div>
 
 
@@ -48,7 +48,7 @@ function Header() {
               </h3>
             </div>
             <div className="insta">
-              <img src="svg/instagram.svg" alt="" />
+              <a href="https://www.instagram.com"><img src="svg/instagram.svg" alt="" /></a>
             </div>
             <div className="voiti">
               <IoPersonCircleOutline />
@@ -65,7 +65,7 @@ function Header() {
         <Link to="/"> <img src="svg/aaa.svg" alt="" /></Link>
 
         <div className="input">
-          <input  onKeyDown={goSearch} value={text} onChange={(e) => setText(e.target.value)} type="text" placeholder='Поиск на сайте' />
+          <input onKeyDown={goSearch} value={text} onChange={(e) => setText(e.target.value)} type="text" placeholder='Поиск на сайте' />
           <button> <img src="svg/search.svg" alt="" /></button>
         </div>
         <div className="truck">
@@ -130,7 +130,7 @@ function Header() {
           Подтяжки
         </div>
         </Link>
-       
+
         <div className="line"></div>
         <Link to="backpack/"><div className="backpack">
           <img src="svg/backpack.svg" alt="" />
@@ -145,17 +145,19 @@ function Header() {
         </Link>
         <div className="line"></div>
         <Link to="gloves/">
-        <div className="perchatki">
-          <img src="svg/perchatki.svg" alt="" />
-          Перчатки
-        </div>
-        </Link>  
+          <div className="perchatki">
+            <img src="svg/perchatki.svg" alt="" />
+            Перчатки
+          </div>
+        </Link>
         <div className="line"></div>
+        <Link to="tie/">
+          <div className="galstuki">
+            <img src="svg/galstuk.svg" alt="" />
+            Галстуки
+          </div>
+        </Link>
 
-        <div className="galstuki">
-          <img src="svg/galstuk.svg" alt="" />
-          Галстуки
-        </div>
         <div className="line"></div>
         <div className="braslety">
           <img src="svg/braslet.svg" alt="" />

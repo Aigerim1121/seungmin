@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { changeCount, removeCart } from "../redux/cart/cartSlice";
+import { changeCount, removeCart, clearCart } from "../redux/cart/cartSlice";
 import "./Cart.scss";
 import { alldelete } from "../redux/wish/wishSlice";
 
@@ -47,18 +47,16 @@ function Cart() {
         setFormData((prev) => ({ ...prev, [name]: value }));
     };
 
-    const handleDelivery = (value) => setFormData((prev) => ({ ...prev, delivery: value }));
-    const handlePayment = (value) => setFormData((prev) => ({ ...prev, payment: value }));
+    const handleDelivery = (value) =>
+        setFormData((prev) => ({ ...prev, delivery: value }));
+
+    const handlePayment = (value) =>
+        setFormData((prev) => ({ ...prev, payment: value }));
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-        const random = Math.random();
-        if (random > 0.5) {
-            setStatus("success");
-        } else {
-            setStatus("error");
-        }
-    };
+    e.preventDefault();
+    setStatus("success"); // ✅ Всегда успешный заказ
+};
 
     const handleReset = () => {
         setStatus(null);
@@ -76,6 +74,13 @@ function Cart() {
             promo: "",
         });
     };
+
+    // ✅ Очистка корзины только один раз при успешном заказе
+    useEffect(() => {
+        if (status === "success") {
+            dispatch(clearCart());
+        }
+    }, [status, dispatch]);
 
     if (status === "error") {
         return (
@@ -109,7 +114,11 @@ function Cart() {
             ) : (
                 cartItems.map((item) => (
                     <div className="cart-item" key={item.id}>
-                        <img src={item.image} alt={item.title} className="cart-item__img" />
+                        <img
+                            src={item.image}
+                            alt={item.title}
+                            className="cart-item__img"
+                        />
                         <div className="cart-item__info">
                             <p className="cart-item__title">{item.title}</p>
                             <span className="cart-item__price">{item.price} ₽</span>
@@ -133,55 +142,112 @@ function Cart() {
                 ))
             )}
 
-
             <form className="checkout" onSubmit={handleSubmit}>
                 <h3>Контактная информация</h3>
 
                 <div className="checkout__section personal">
                     <div className="left">
                         <h4>Личные данные</h4>
-                        <input name="name" placeholder="Ваше имя *" value={formData.name} onChange={handleChange} required />
-                        <input name="phone" placeholder="Ваш телефон *" value={formData.phone} onChange={handleChange} required />
-                        <input name="email" placeholder="Ваш E-mail *" value={formData.email} onChange={handleChange} required />
+                        <input
+                            name="name"
+                            placeholder="Ваше имя *"
+                            value={formData.name}
+                            onChange={handleChange}
+                            required
+                        />
+                        <input
+                            name="phone"
+                            placeholder="Ваш телефон *"
+                            value={formData.phone}
+                            onChange={handleChange}
+                            required
+                        />
+                        <input
+                            name="email"
+                            placeholder="Ваш E-mail *"
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                        />
                     </div>
 
                     <div className="right">
                         <h4>Данные для доставки</h4>
-                        <select name="country" value={formData.country} onChange={handleChange}>
+                        <select
+                            name="country"
+                            value={formData.country}
+                            onChange={handleChange}
+                        >
                             <option>Российская Федерация</option>
                             <option>Казахстан</option>
                             <option>Беларусь</option>
                             <option>Кыргызстан</option>
                             <option>Узбекистан</option>
                         </select>
-                        <input name="city" placeholder="Город *" value={formData.city} onChange={handleChange} required />
-                        <input name="region" placeholder="Регион *" value={formData.region} onChange={handleChange} required />
-                        <input name="address" placeholder="Ваш адрес *" value={formData.address} onChange={handleChange} required />
+                        <input
+                            name="city"
+                            placeholder="Город *"
+                            value={formData.city}
+                            onChange={handleChange}
+                            required
+                        />
+                        <input
+                            name="region"
+                            placeholder="Регион *"
+                            value={formData.region}
+                            onChange={handleChange}
+                            required
+                        />
+                        <input
+                            name="address"
+                            placeholder="Ваш адрес *"
+                            value={formData.address}
+                            onChange={handleChange}
+                            required
+                        />
                     </div>
                 </div>
 
                 <h3>Способ получения</h3>
                 <div className="options">
-                    <label className={formData.delivery === "pickup" ? "active" : ""} onClick={() => handleDelivery("pickup")}>
+                    <label
+                        className={formData.delivery === "pickup" ? "active" : ""}
+                        onClick={() => handleDelivery("pickup")}
+                    >
                         Самовывоз с примеркой <span>Можно забрать до 10 дней</span>
                     </label>
-                    <label className={formData.delivery === "courier" ? "active" : ""} onClick={() => handleDelivery("courier")}>
+                    <label
+                        className={formData.delivery === "courier" ? "active" : ""}
+                        onClick={() => handleDelivery("courier")}
+                    >
                         Доставка курьером <span>от 1 до 2 дней</span>
                     </label>
-                    <label className={formData.delivery === "pochta" ? "active" : ""} onClick={() => handleDelivery("pochta")}>
+                    <label
+                        className={formData.delivery === "pochta" ? "active" : ""}
+                        onClick={() => handleDelivery("pochta")}
+                    >
                         Доставка Белпочтой <span>от 5 до 14 дней</span>
                     </label>
-                    <label className={formData.delivery === "belarus" ? "active" : ""} onClick={() => handleDelivery("belarus")}>
+                    <label
+                        className={formData.delivery === "belarus" ? "active" : ""}
+                        onClick={() => handleDelivery("belarus")}
+                    >
                         Доставка в Беларусь <span>от 3 до 5 дней</span>
                     </label>
                 </div>
 
                 <h3>Способ оплаты</h3>
                 <div className="options">
-                    <label className={formData.payment === "cash" ? "active" : ""} onClick={() => handlePayment("cash")}>
+                    <label
+                        className={formData.payment === "cash" ? "active" : ""}
+                        onClick={() => handlePayment("cash")}
+                    >
                         Оплата при получении
                     </label>
-                    <label className={formData.payment === "card" ? "active" : ""} onClick={() => handlePayment("card")}>
+                    <label
+                        className={formData.payment === "card" ? "active" : ""}
+                        onClick={() => handlePayment("card")}
+                    >
                         Оплата заказа на сайте
                     </label>
                 </div>
@@ -202,9 +268,9 @@ function Cart() {
                 />
 
                 <div className="checkout__footer">
-                     {cartItems.length > 0 && (
-                <h3 className="cart-total">Общая сумма: {totalPrice} ₽</h3>
-            )}
+                    {cartItems.length > 0 && (
+                        <h3 className="cart-total">Общая сумма: {totalPrice} ₽</h3>
+                    )}
                     <button type="submit">Оформить заказ</button>
                 </div>
             </form>

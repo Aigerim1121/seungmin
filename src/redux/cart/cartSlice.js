@@ -20,14 +20,17 @@ const cartSlice = createSlice({
       state.list = state.list.filter((item) => item.id !== action.payload);
     },
     changeCount: (state, action) => {
-      const { id, count } = action.payload;
-      const item = state.list.find((item) => item.id === id);
-      if (item && count > 0) {
-        item.count = count;
+      const item = state.list.find((i) => i.id === action.payload.id);
+      if (item) {
+        item.count = action.payload.count;
       }
+    },
+    // ✅ жаңы экшен — корзинаны толугу менен тазалайт
+    clearCart: (state) => {
+      state.list = [];
     },
   },
 });
 
-export const { addCart, removeCart, changeCount } = cartSlice.actions;
+export const { addCart, removeCart, changeCount, clearCart } = cartSlice.actions;
 export default cartSlice.reducer;

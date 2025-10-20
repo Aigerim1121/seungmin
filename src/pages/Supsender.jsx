@@ -1,15 +1,33 @@
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getProducts } from "../redux/supsenderApi/supsenderApi";
-import { addCart } from "../redux/cart/cartSlice";
-import "./Bags.scss";
-import { MdOutlineShoppingCart } from "react-icons/md";
 import { FaRegCircleCheck } from "react-icons/fa6";
+import { MdOutlineShoppingCart } from "react-icons/md";
+import { useDispatch, useSelector } from "react-redux";
+import { getProducts } from "../redux/supsenderApi/supsenderApi"; // твой fetch API
+import { addCart } from "../redux/cart/cartSlice";
+import { useNavigate } from "react-router-dom";
+import "./Bags.scss";
 
-function Bags() {
+function Supsender() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  const { list, loading, error } = useSelector((state) => state.products);
+  // Берём товары из всех категорий
+  const products = useSelector((state) => {
+    const categories = [
+      state.belts?.list || [],
+      state.bags?.list || [],
+      state.hats?.list || []
+    ];
+    return categories.flat();
+  });
+
+  // Для загрузки и ошибок можно взять общий флаг (если есть)
+  const loading = useSelector((state) =>
+    state.belts?.loading || state.bags?.loading || state.hats?.loading
+  );
+  const error = useSelector((state) =>
+    state.belts?.error || state.bags?.error || state.hats?.error
+  );
 
   useEffect(() => {
     dispatch(getProducts());
@@ -20,15 +38,19 @@ function Bags() {
 
   return (
     <div className="product">
-      {list.map((item) => (
+      {products.map((item) => (
         <div className="poduct" key={item.id}>
           <div className="cardik">
             <div className="two-btn">
               <button className="novinka">Новинка</button>
               <button className="hit">ХИТ!</button>
             </div>
-
-            <img src={item.image} alt={item.title} />
+            <img
+              src={item.image}
+              alt={item.title}
+              onClick={() => navigate(`/product/${item.id}`)}
+              style={{ cursor: "pointer" }}
+            />
             <p>
               Код: {item.id} <FaRegCircleCheck /> В наличии
             </p>
@@ -37,7 +59,7 @@ function Bags() {
 
             <div className="price-btn">
               <h3>{item.price} р.</h3>
-              <button onClick={() => dispatch(addCart(item))}>
+              <button onClick={() => dispatch(addCart({ ...item, count: 1 }))}>
                 <MdOutlineShoppingCart /> В корзину
               </button>
             </div>
@@ -48,4 +70,4 @@ function Bags() {
   );
 }
 
-export default Bags;
+export default Supsender;

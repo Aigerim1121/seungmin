@@ -23,6 +23,8 @@ import Brends from "./pages/Brends"
 import Backpack from "./pages/Backpack"
 import Accessories from "./pages/Accessories"
 import Gloves from "./pages/Gloves"
+import Product from "./pages/Product";
+import Tie from "./pages/Tie";
 
 const myRouter = createBrowserRouter([
     {
@@ -116,6 +118,14 @@ const myRouter = createBrowserRouter([
             {
                 path:"gloves",
                 element: <Gloves/>
+            },
+            {
+                path:"product/:id",
+                element: <Product/>
+            },
+            {
+                path:"tie",
+                element: <Tie/>
             },
             {
                 path: "*",

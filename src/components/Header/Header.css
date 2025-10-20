@@ -481,3 +481,144 @@
     text-decoration: none;
 }
 
+/* === АДАПТИВКА ДЛЯ МОБИЛЬНЫХ === */
+@media (max-width: 1024px) {
+  .header, .header3, .huinya {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .texty {
+    display: none; /* скрываем длинное меню сверху */
+  }
+
+  .truck, .adres {
+    display: none; /* убираем доставку и адрес */
+  }
+
+  .korzina {
+    width: auto;
+    height: 40px;
+  }
+
+  .korzina button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .korzina p {
+    display: none;
+  }
+
+  .icons a span {
+    left: 0;
+    top: -30px;
+  }
+
+  .input input {
+    width: 180px;
+    height: 40px;
+    padding: 10px;
+  }
+
+  .input button {
+    width: 50px;
+    height: 40px;
+    padding: 10px;
+  }
+
+  .header img {
+    width: 150px;
+    height: auto;
+  }
+
+  .header {
+    gap: 10px;
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  .header3 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    height: auto;
+  }
+
+  .header3 div {
+    width: 80px;
+    height: auto;
+    font-size: 12px;
+  }
+
+  .header3 img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Маленькие экраны (телефоны) */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .huinya, .header1 {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 5px;
+  }
+
+  .pickmi {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .voiti, .insta, .nomer {
+    box-shadow: none;
+    background: none;
+    padding: 0;
+  }
+
+  .voiti a h5 {
+    font-size: 12px;
+  }
+
+  .header img {
+    width: 120px;
+  }
+
+  .input {
+    width: 90%;
+    justify-content: center;
+  }
+
+  .input input {
+    width: 70%;
+  }
+
+  .input button {
+    width: 50px;
+  }
+
+  .header3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 10px;
+  }
+
+  .header3 div {
+    justify-content: center;
+    font-size: 11px;
+  }
+
+  .line {
+    display: none;
+  }
+}

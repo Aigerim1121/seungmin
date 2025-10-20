@@ -1,14 +1,95 @@
 .banner {
+  width: 1350px;
+  height: 501px;
+  margin: auto;
+  display: flex;
+  border-radius: 100px;
+
+  .images-d {
     width: 1350px;
     height: 501px;
-    margin: auto;
-    display: flex;
     border-radius: 100px;
-   
-    .images-d{
-       width: 1350px;
-       height: 501px;
-       border-radius: 100px;
-       margin: auto;
+    margin: auto;
+  }
+
+  /* === адаптивка === */
+  @media (max-width: 1200px) {
+    width: 100%;
+    height: 400px;
+
+    .images-d {
+      width: 100%;
+      height: 400px;
+      border-radius: 50px;
     }
+  }
+
+  @media (max-width: 992px) {
+    width: 100%;
+    height: 320px;
+
+    .images-d {
+      width: 100%;
+      height: 320px;
+      border-radius: 40px;
+    }
+
+    .carousel-caption {
+      bottom: 40px;
+
+      h3 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 250px;
+
+    .images-d {
+      width: 100%;
+      height: 250px;
+      border-radius: 25px;
+    }
+
+    .carousel-caption {
+      bottom: 30px;
+
+      h3 {
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    height: 200px;
+
+    .images-d {
+      width: 100%;
+      height: 200px;
+      border-radius: 20px;
+    }
+
+    .carousel-caption {
+      bottom: 15px;
+
+      h3 {
+        font-size: 14px;
+      }
+
+      p {
+        font-size: 10px;
+      }
+    }
+  }
 }

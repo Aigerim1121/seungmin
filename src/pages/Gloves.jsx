@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
+import { FaRegCircleCheck } from "react-icons/fa6";
+import { MdOutlineShoppingCart } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../redux/Gloves/Gloves";
 import { addCart } from "../redux/cart/cartSlice";
+import { useNavigate } from "react-router-dom"; 
 import "./Bags.scss";
-import { MdOutlineShoppingCart } from "react-icons/md";
-import { FaRegCircleCheck } from "react-icons/fa6";
 
-
-function Bags() {
+function Gloves() {
   const dispatch = useDispatch();
-  const { list, loading, error } = useSelector((state) => state.bags);
+  const navigate = useNavigate(); 
+
+  const { list: products, loading, error } = useSelector((state) => state.bags);
 
   const [filterType, setFilterType] = useState(""); // "max" | "min" | ""
 
@@ -20,16 +22,16 @@ function Bags() {
   if (loading) return <p>Загрузка...</p>;
   if (error) return <p>Ошибка: {error}</p>;
 
-  // 🔹 Фильтруем по типу
-  const filteredList = list.filter((item) => {
+  // 🔹 Фильтруем по цене
+  const filteredProducts = products.filter((item) => {
     const price = Number(item.price);
     if (filterType === "max") return price >= 1000;
     if (filterType === "min") return price < 1000;
-    return true; // если ничего не выбрано — показывать всё
+    return true; // если фильтр не выбран — показываем всё
   });
 
   return (
-    <div className="bags-container ">
+    <div className="bags-container">
       {/* Кнопки фильтра */}
       <div className="filter-buttons container">
         <button
@@ -53,8 +55,8 @@ function Bags() {
 
       {/* Карточки товаров */}
       <div className="product">
-        {filteredList.length > 0 ? (
-          filteredList.map((item) => (
+        {filteredProducts.length > 0 ? (
+          filteredProducts.map((item) => (
             <div className="poduct" key={item.id}>
               <div className="cardik">
                 <div className="two-btn">
@@ -62,7 +64,13 @@ function Bags() {
                   <button className="hit">ХИТ!</button>
                 </div>
 
-                <img src={item.image} alt={item.title} />
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  onClick={() => navigate(`/product/${item.id}`)}
+                  style={{ cursor: "pointer" }}
+                />
+
                 <p>
                   Код: {item.id} <FaRegCircleCheck /> В наличии
                 </p>
@@ -71,7 +79,7 @@ function Bags() {
 
                 <div className="price-btn">
                   <h3>{item.price} р.</h3>
-                  <button onClick={() => dispatch(addCart(item))}>
+                  <button onClick={() => dispatch(addCart({ ...item, count: 1 }))}>
                     <MdOutlineShoppingCart /> В корзину
                   </button>
                 </div>
@@ -86,4 +94,4 @@ function Bags() {
   );
 }
 
-export default Bags;
+export default Gloves;

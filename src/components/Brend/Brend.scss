@@ -1,61 +1,112 @@
 .brendy {
-    width: 1450px;
-    height: 460px;
-    background: rgba(59, 67, 85, 1);
-    margin: auto;
-    position: relative;
-    margin-top: 80px;
+  width: 100%;
+  max-width: 1450px;
+  background: rgba(59, 67, 85, 1);
+  margin: 80px auto 0 auto;
+  padding: 40px 20px;
+  text-align: center;
 
-    h3 {
-        width: 249px;
-        height: 43px;
-        color: rgba(240, 239, 237, 1);
-        font-size: 34px;
-        font-family: Merriweather;
-        font-weight: 400;
-        line-height: 100%;
-        letter-spacing: 0%;
-        text-align: left;
-        margin-left: 640px;
-        position: absolute;
-        top: 86px;
-    }
+  h3 {
+    color: rgba(240, 239, 237, 1);
+    font-size: 34px;
+    font-family: Merriweather;
+    font-weight: 400;
+    margin-bottom: 40px;
+  }
 
-    .brendsss {
-        display: flex;
-        gap: 30px;
-        justify-content: center;
-        position: absolute;
-        left: 90px;
-        top: 220px;
-    }
+  .brendsss {
+    display: flex;
+    flex-wrap: wrap; /* перенос элементов */
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
 
-    button {
-        width: 192px;
-        height: 50px;
-        border: 1px solid rgba(238, 178, 86, 1);
-        border-radius: 3px;
-        color: rgba(238, 178, 86, 1);
-        background: transparent;
-        position: absolute;
-        left: 640px;
-        top: 350px;
-    }
+  .godjo {
+    width: 192px;
+    height: 70px;
+    border-radius: 3px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     img {
-        width: 100px;
-        height: 40px;
-        object-fit: contain;
+      width: 100px;
+      height: 40px;
+      object-fit: contain;
     }
+  }
 
-    .godjo {
-        width: 192px;
-        height: 70px;
-        border-radius: 3px;
-        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
-        background: rgba(255, 255, 255, 1);
-        display: flex;
-        align-items: center;
-        justify-content: center;
+  button {
+    width: 192px;
+    height: 50px;
+    border: 1px solid rgba(238, 178, 86, 1);
+    border-radius: 3px;
+    color: rgba(238, 178, 86, 1);
+    background: transparent;
+    cursor: pointer;
+  }
+
+  /* ----------------- Мобильная адаптивка ----------------- */
+  @media (max-width: 1200px) {
+    h3 {
+      font-size: 28px;
     }
+    .godjo {
+      width: 150px;
+      height: 60px;
+
+      img {
+        width: 80px;
+        height: 35px;
+      }
+    }
+    button {
+      width: 160px;
+      height: 45px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    h3 {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+    .godjo {
+      width: 130px;
+      height: 55px;
+
+      img {
+        width: 70px;
+        height: 30px;
+      }
+    }
+    button {
+      width: 140px;
+      height: 40px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    h3 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    .godjo {
+      width: 100px;
+      height: 50px;
+
+      img {
+        width: 60px;
+        height: 25px;
+      }
+    }
+    button {
+      width: 120px;
+      height: 35px;
+      font-size: 14px;
+    }
+  }
 }

@@ -221,3 +221,129 @@
     }
   }
 }
+
+@media (max-width: 1200px) {
+  .footer .footer-container {
+    width: 95%;
+  }
+
+  .footer2 {
+    gap: 40px;
+  }
+
+  .footer2 .belarus img {
+    width: 400px;
+    height: auto;
+  }
+}
+
+@media (max-width: 992px) {
+  .footer2 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer2 .contact-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .footer2 p {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .footer2 .belarus img {
+    width: 300px;
+    height: auto;
+  }
+
+  .footer .footer-container {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    gap: 40px;
+  }
+
+  .footer .footer-block {
+    text-align: center;
+  }
+
+  .footer .payment-grid,
+  .footer .installment-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer1 .carta img {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer2 h2 {
+    font-size: 24px;
+  }
+
+  .footer2 p {
+    font-size: 16px;
+  }
+
+  .footer2 strong {
+    font-size: 20px;
+  }
+
+  .footer .payment-grid,
+  .footer .installment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer .footer-container {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer2 h2 {
+    font-size: 20px;
+  }
+
+  .footer2 p {
+    font-size: 14px;
+  }
+
+  .footer2 strong {
+    font-size: 18px;
+  }
+
+  .footer .payment-grid,
+  .footer .installment-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+
+  .footer .payment-card,
+  .footer .installment-card {
+    width: 90px;
+    height: 40px;
+
+    img {
+      width: 80px;
+      height: 40px;
+    }
+  }
+
+  .footer .footer-block h4 {
+    font-size: 14px;
+  }
+
+  .footer .footer-block p {
+    font-size: 12px;
+  }
+
+  .footer .social-icons {
+    justify-content: center;
+  }
+}

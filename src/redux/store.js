@@ -3,6 +3,7 @@ import wishReducer from "./wish/wishSlice"
 import productReducer from "./getApi/getApi"
 import cartReducer from "./cart/cartSlice"
 import bagsReducer from "./bagsApi/bagsApi"
+import beltsReducer from "./beltApi/beltApi"
 
 
 const myStore = configureStore({
@@ -10,7 +11,8 @@ const myStore = configureStore({
         wish: wishReducer,
         products: productReducer,
         cart: cartReducer,
-        bags: bagsReducer
+        bags: bagsReducer,
+        belts: beltsReducer
     }
 })
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Brend.scss"
 import bdek from "../../assets/image/bdek.png"
+import { Link } from 'react-router-dom'
 
 function Brend() {
   return (
@@ -31,7 +32,7 @@ function Brend() {
 
 
 
-      <button>Все бренды</button>
+      <Link to="brends/"><button>Все бренды</button></Link>
     </div>
   )
 }

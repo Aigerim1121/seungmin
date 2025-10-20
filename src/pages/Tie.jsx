@@ -2,12 +2,12 @@ import React, { useEffect } from "react";
 import { FaRegCircleCheck } from "react-icons/fa6";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
-import { getProducts } from "../../redux/getApi/getApi"; // твой fetch API
-import { addCart } from "../../redux/cart/cartSlice";
+import { getProducts } from "../redux/tieApi/tieApi"; // твой fetch API
+import { addCart } from "../redux/cart/cartSlice";
 import { useNavigate } from "react-router-dom";
-import "./Card.scss";
+import "./Bags.scss";
 
-function Card() {
+function Tie() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -70,4 +70,4 @@ function Card() {
   );
 }
 
-export default Card;
+export default Tie;

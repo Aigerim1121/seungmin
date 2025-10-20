@@ -1,98 +1,140 @@
 .bg {
-    width: 1450px;
-    height: 318px;
+    width: 100%;
+    max-width: 1450px;
+    height: auto;
     margin: auto;
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 20px;
     margin-top: 38px;
     background: rgba(237, 237, 237, 1);
+    flex-wrap: wrap; // важно для мобильных
 
-    .magazin {
+    .magazin,
+    .magazin2,
+    .magazin3 {
         width: 414px;
         height: 260px;
-        margin: 0 auto;
-        background-image: url("svg/divan.svg");
+        margin: 10px auto;
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
 
         h1 {
-            width: 243px;
-            height: 80px;
-            color: rgba(240, 239, 237, 1);
+            width: 80%;
+            color: white;
             font-size: 34px;
             font-weight: 400;
             line-height: 43px;
-            letter-spacing: 0%;
-            text-align: center;
-            margin: auto;
-            margin-top: 48px;
-            color: white;
+            margin-bottom: 20px;
         }
+
+        button {
+            width: 192px;
+            height: 50px;
+            border: 1px solid rgba(238, 178, 86, 1);
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            color: rgba(238, 178, 86, 1);
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background: rgba(238, 178, 86, 1);
+                color: white;
+            }
+        }
+    }
+
+    .magazin {
+        background-image: url("svg/divan.svg");
     }
 
     .magazin2 {
-        width: 414px;
-        height: 260px;
-        margin: 0 auto;
-        
         background-image: url("svg/ruka.svg");
-
-        h1 {
-            width: 257px;
-            height: 80px;
-            color: rgba(240, 239, 237, 1);
-            font-size: 34px;
-            font-weight: 400;
-            line-height: 43px;
-            letter-spacing: 0%;
-            text-align: center;
-            margin: auto;
-            margin-top: 48px;
-            color: white;
-            
-
-        }
     }
 
     .magazin3 {
-        width: 200px;
-        height: 80px;
-        width: 414px;
-        height: 260px;
-        margin: 0 auto;
         background-image: url("svg/walllet.svg");
+    }
 
-        h1 {
-            color: rgba(240, 239, 237, 1);
-            font-size: 34px;
-            font-weight: 400;
-            line-height: 43px;
-            letter-spacing: 0%;
-            text-align: center;
-            margin-top: 48px;
-            color: white;
+    a {
+        text-decoration: none;
+    }
 
+    /* =======================
+       📱 АДАПТИВКА
+    ======================= */
 
+    /* Планшеты */
+    @media (max-width: 1024px) {
+        .magazin, .magazin2, .magazin3 {
+            width: 320px;
+            height: 220px;
+
+            h1 {
+                font-size: 28px;
+                line-height: 38px;
+            }
+
+            button {
+                width: 160px;
+                height: 45px;
+                font-size: 15px;
+            }
         }
     }
 
-    a{
-        text-decoration: none;
+    /* Смартфоны */
+    @media (max-width: 768px) {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+
+        .magazin, .magazin2, .magazin3 {
+            width: 90%;
+            height: 200px;
+            margin: 10px 0;
+
+            h1 {
+                font-size: 24px;
+                line-height: 32px;
+            }
+
+            button {
+                width: 150px;
+                height: 40px;
+                font-size: 14px;
+                margin-top: 15px;
+            }
+        }
     }
 
-    button {
-        width: 192px;
-        height: 50px;
-        border: 1px solid rgba(238, 178, 86, 1);
-        border-radius: 3px;
-        display: flex;
-        margin-top: 28px;
-        margin-left: 111px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: transparent;
-        color: rgba(238, 178, 86, 1);
-        cursor: pointer;
-        text-decoration: none;
+    /* Очень маленькие экраны (например, iPhone SE) */
+    @media (max-width: 480px) {
+        .magazin, .magazin2, .magazin3 {
+            height: 180px;
+
+            h1 {
+                font-size: 20px;
+                line-height: 28px;
+            }
+
+            button {
+                width: 130px;
+                height: 38px;
+                font-size: 13px;
+            }
+        }
     }
 }
-
